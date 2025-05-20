@@ -1,3 +1,4 @@
+
 // "use client"
 import { useState } from "react";
 
@@ -7,11 +8,6 @@ import RowTeam from "@/components/layout/rowteam";
 import InputField from "@/components/input/input";
 import{ Geist, Geist_Mono} from "next/font/google"
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 
 
@@ -46,6 +42,7 @@ const geistSans = Geist({
 
 
 export default function Home() {
+
 
   const [userData, setData] = useState ({
     email:"",

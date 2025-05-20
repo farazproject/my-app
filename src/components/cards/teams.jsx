@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import {CiClock2} from 'react-icons/ci';
 import { MdOutlineLocationOn } from "react-icons/md";
 // import { IoCalenderClearOutline } from "react-icons/io5";
@@ -17,7 +18,9 @@ function Teams({data}) {
 
 
 
+
   return (
+
     <div className="max-w-[30%] m-2 w-full text-black">
       <div className="flex flex-col">
         <div
@@ -27,6 +30,7 @@ function Teams({data}) {
             <div className="w-[70px] h-[70px] bg-purple-900 rounded-[50%]"></div>
             <p>VS</p>
             <div className="w-[70px] h-[70px] bg-purple-900 rounded-[50%]"></div>
+
           </div>
         </div>
 
@@ -39,6 +43,7 @@ function Teams({data}) {
               Premier League
             </span>
           </p>
+
           <h3 className="text-[18px]">
 
             {data.team1} vs {data.team2}
@@ -47,17 +52,21 @@ function Teams({data}) {
             <MdOutlineLocationOn />
 
             <span> {data?.stadiumName}</span></div>
+
           <div className="flex gap-2">
             <div className="flex items-center gap-[10px]">
               {/* <IoCalenderClearOutline/> */}
               <span> Thu 07 Dec</span>
             </div>
             <div className="flex items-center gap-[10px]">
+
               <CiClock2/>
+
               <span>8:15 PM</span>
             </div>
           </div>
           <div className="flex items-center mt-2 justify-between">
+
             <h3>${count}</h3>
             <button 
             onClick={increment}
