@@ -1,7 +1,15 @@
-"use client"
-import Image from "next/image";
+// "use client"
+
 import Header from "@/components/header/header";
 import Teams from "@/components/cards/teams";
+import RowTeam from "@/components/layout/rowteam";
+import{ Geist, Geist_Mono} from "next/font/google"
+
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
 
 
@@ -20,7 +28,7 @@ import Teams from "@/components/cards/teams";
       league : "Premier League",
       time : "20:15",
       date : "Thu 07 Dec",
-      stadiunName : "artifield Stadium"
+      stadiunName : "old trafford Stadium"
     },
         {
       team1 : "Arsenal",
@@ -28,7 +36,7 @@ import Teams from "@/components/cards/teams";
       league : "Premier League",
       time : "20:15",
       date : "Thu 07 Dec",
-      stadiunName : "artifield Stadium"
+      stadiunName : "la costa Stadium"
     }
   ]
 
@@ -38,9 +46,18 @@ import Teams from "@/components/cards/teams";
 export default function Home() {
   return (
     <div className="flex flex-col">
+      
       <Header/>
-      <Teams/>
-
+      <p className="text-white bg-red">Tornament</p>
+      <RowTeam>
+        {/* {<Teams/>} */}
+        {
+          matches?.map((match, index) =>{
+            return <Teams key={index} data={match}/>
+          })
+        }
+      </RowTeam>
+      
     </div>
   );
 }
