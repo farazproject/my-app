@@ -17,8 +17,6 @@ function Teams({data}) {
 
 
 
-
-
   return (
     <div className="max-w-[30%] m-2 w-full text-black">
       <div className="flex flex-col">
