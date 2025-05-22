@@ -8,6 +8,7 @@ import RowTeam from "@/components/layout/rowteam";
 import InputField from "@/components/input/input";
 import ControlledInput from "@/components/input/controlled";
 import UncontrolledInput from "@/components/input/uncontrolled";
+import FetchingData from "@/components/input/axios";
 import{ Geist, Geist_Mono} from "next/font/google"
 
 
@@ -86,6 +87,8 @@ export default function Home() {
 
       <ControlledInput/>
       <UncontrolledInput/>
+
+      <FetchingData/>
       
      
       
