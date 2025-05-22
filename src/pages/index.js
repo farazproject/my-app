@@ -45,7 +45,7 @@ export default function Home() {
 
 
   const [userData, setData] = useState ({
-    email:"",
+    email:"abc",
     password:""
 })
 
@@ -74,7 +74,7 @@ export default function Home() {
         
       <InputField id={'email'} label={"email"} value ={userData.email} onChange={(e)=> {
         setData({...userData, email:e.target.value})
-        console.log(userData.email)
+        console.log(e.target.value)
         }} />
 
       <InputField id={'password'} label={"password"} type={"password"} value ={userData.password} onChange={(e) => {

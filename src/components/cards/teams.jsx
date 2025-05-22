@@ -8,7 +8,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 function Teams({data}) {
 
         useEffect( () =>{
-            console.log( data,"faraz");
+          
         }, [])
 
         const [count, setCount] = useState(355);
