@@ -6,6 +6,8 @@ import Header from "@/components/header/header";
 import Teams from "@/components/cards/teams";
 import RowTeam from "@/components/layout/rowteam";
 import InputField from "@/components/input/input";
+import ControlledInput from "@/components/input/controlled";
+import UncontrolledInput from "@/components/input/uncontrolled";
 import{ Geist, Geist_Mono} from "next/font/google"
 
 
@@ -81,6 +83,10 @@ export default function Home() {
         setData({...userData, password:e.target.value})
         console.log(userData.password)
       }}/>
+
+      <ControlledInput/>
+      <UncontrolledInput/>
+      
      
       
     </div>
