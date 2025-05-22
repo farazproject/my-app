@@ -3,11 +3,14 @@ import axios from "axios";
 import { useEffect } from "react"; // Import useEffect from React library
 
 function FetchingData(){            // Function component
+    //const [users, setUsers] = useState([]);    // State to store the data
     const [users, setUsers] = useState([]);    // State to store the data
 
     const getData = () => {
         axios.get("https://jsonplaceholder.typicode.com/users") // API endpoint
-        .then(res => console.log(res))
+        .then(res => {setUsers(res)
+            console.log(users);
+        })
         .catch(err => console.log(err))
     };
 
