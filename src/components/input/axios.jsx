@@ -8,7 +8,7 @@ function FetchingData(){            // Function component
 
     const getData = () => {
         axios.get("https://jsonplaceholder.typicode.com/users") // API endpoint
-        .then(res => {setUsers(res)
+        .then(res => {setUsers(res.data) // Set the state with the response data
             console.log(users);
         })
         .catch(err => console.log(err))
@@ -22,8 +22,12 @@ function FetchingData(){            // Function component
 
 
     return (
-        <div> this is the fetching area</div>
-    )
+        <ul>
+            {users.map((user) =>
+            <li className="flex flex-row"> {user.name}  {user.phone}</li>
+            )}
+        </ul>
+             )
 }
 
 export default FetchingData // Exporting the component
