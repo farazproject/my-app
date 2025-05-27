@@ -12,9 +12,6 @@ function InputField({ id, label, onChange, type, value }) {
             <input id={id} onChange = {onChange} value={value}  type={type} className="text-red-500 px-2 py-2 bg-white"/> 
         
         </div>
-        
-
-      
            
 
         
